@@ -5,8 +5,6 @@ The goal of this project is to create an indoor sound classifier for the followi
 <mark>Work-in-progress</mark>
 
 **Approaches used:**
-* Audio to Spectrogram, train on CNNs
-* Audio processed via librosa libraries, Transfer learning
 
 **Questions to solve:**
 * Does the sampling rate of the sound dataset matter? Google AudioSet (Features extracted at 1Hz) vs self collated dataset via FreeSound API (44.1 kHz)
