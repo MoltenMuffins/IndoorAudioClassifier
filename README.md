@@ -58,7 +58,7 @@ These stamps were then placed in folders according to their classes.
 The dataset was uploaded into Google Colabs and were shuffled into training and validation splits. Each Neural Net was trained for 5 epochs through the data before further action was taken.
 
 The final accuracy of each network is as follows:
-*VGGish is omitted as there were problems loading our custom dataset to train.
+*VGGish is omitted as there were problems loading our custom dataset to train.*
 
 > * **Basic Neural Network** `acc: 0.3365 - val_acc: 0.2781`
 > * **VGG16** `acc: 0.8900 - val_acc: 0.5809`
