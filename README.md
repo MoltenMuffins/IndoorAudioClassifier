@@ -1,4 +1,4 @@
-# Indoor Audio Classifier
+# Indoor Audio Classifier for EDGE-X + SCALE @ NTU
 ## 1. Problem Case
 For this EDGE-X deep learning project, the task assigned was to create and train a machine learning model to classify sound input within the context of an indoor setting.
 
@@ -60,21 +60,14 @@ The dataset was uploaded into Google Colabs and were shuffled into training and 
 The final accuracy of each network is as follows:
 *VGGish is omitted as there were problems loading our custom dataset to train.
 
-```
-Basic Neural Network acc: 0.3365 - val_acc: 0.2781
-VGG16 acc: 0.8900 - val_acc: 0.5809
-Transfer Learning on InceptionV3 with Imagenet weights 
-acc 0.2064 - val_acc: 0.2017
-Transfer Learning on VGG16 with Imagenet weights
-acc: 0.2603 - val_acc: 0.2503
-```
+> * **Basic Neural Network** `acc: 0.3365 - val_acc: 0.2781`
+> * **VGG16** `acc: 0.8900 - val_acc: 0.5809`
+> * **Transfer Learning on InceptionV3 with Imagenet weights** `acc 0.2064 - val_acc: 0.2017`
+> * **Transfer Learning on VGG16 with Imagenet weights** `acc: 0.2603 - val_acc: 0.2503`
 
 As the VGG16 model with no weights seemed promising, it was trained further for 30 epochs.
 
-```
-VGG16 
-loss: 0.0246 - acc: 0.9990 - val_loss: 1.7021 - val_acc: 0.6359
-```
+> **VGG16** `loss: 0.0246 - acc: 0.9990 - val_loss: 1.7021 - val_acc: 0.6359`
 
 However, despite the high accuracy reported by the model, it is likely overfitting given the disparity between the training accuracy and the validation accuracy. This is exemplified that adhoc testing of individual files gives results biased towards the music class.
 
