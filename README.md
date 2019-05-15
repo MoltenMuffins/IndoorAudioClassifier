@@ -30,8 +30,6 @@ maximum silence duration = 100
 silence threshold = 50
 ```
 
-[image:6FBEDB5C-2DA1-478F-8ECB-49FF14DFE6FB-20451-0000F6BE23BC96BD/AD24AA96-C4FE-4E0D-A0DA-6037ACB5D5A9.png]
-
 As a result of the sound splitting, much of the dataset was truncated, leaving us with 263mb of data for all six classes. In particular, the car horn class suffered the most with 17.4mb of usable data left after processing.
 
 The creation of the scripts and mainly studying the mechanisms of the Freesound API took about two months with gaps in the working progress due to examinations and submissions for school.
@@ -51,7 +49,6 @@ As the database consisted of audio files of varying length, they were preprocess
 
 A script `audio_to_stamp_img.py` was written to process the sound files into .png images which are called stamps within the context of the project  as the small images produced resemble stamps.
 
-[image:F5D4F831-DA88-4C14-BCB8-53D17711CB6B-20451-0000F83CD3B2D871/glass.png] [image:6F10AC5A-3A61-4279-BC54-D7B7FB3E5CC0-20451-0000F83ED0DB9C64/horn.png] [image:F861D1E9-1E94-4047-BB42-4CBEC75A9BA4-20451-0000F841702C70A2/music.png] [image:6E21ADFE-722C-4E5D-846B-825DDAA8D2ED-20451-0000F8439618F3DF/door.png] [image:032BDF95-A226-494B-AC9E-E609A6D33D58-20451-0000F84536F1F870/water.png] 
 These stamps were then placed in folders according to their classes.
 
 ## 4. Results
@@ -71,7 +68,7 @@ As the VGG16 model with no weights seemed promising, it was trained further for 
 
 However, despite the high accuracy reported by the model, it is likely overfitting given the disparity between the training accuracy and the validation accuracy. This is exemplified that adhoc testing of individual files gives results biased towards the music class.
 
-The approach of converting sound files directly to images seems to not work well. Alternatively the dataset may not be clean enough for which to produce good results. Unfortunately due to the lack of time, I could not explore other options for the project.
+The approach of converting sound files directly to images seems to not work well. Alternatively the dataset may not be clean enough for which to produce good results. Unfortunately due to the lack of time, I did not explore other options for the project.
 
 ## 5. Conclusion
 The two main challenges encountered in the project can be attributed to the two main tasks in the project, namely the database creation and the model creation. As I am not someone well versed with the subject of programming, much time was spent trying to understand the tools at my disposal, much less put them to use in the way intended. Furthermore, the field of deep learning is extremely broad and this was my first foray into building neural networks. If more time was available to create a larger dataset or try other models, a better trained model could be obtained.
